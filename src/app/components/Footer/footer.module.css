@@ -1,0 +1,132 @@
+.container {
+  color: white;
+  background-color: black;
+  width: 100%;
+}
+
+.background_image {
+  background-image: url("/footer/truck.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background_image div {
+  height: 400px;
+  width: 100%;
+  margin: 0;
+}
+
+.background {
+  background-color: #0a2a59;
+  padding: 40px;
+  margin: 0;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.logo {
+  width: 33.333333%;
+}
+
+.grid{
+  display: grid;
+  width: 66.666667%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+}
+
+.text {
+  opacity: 0.8;
+  line-height: 2;
+}
+
+.email {
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.email img {
+  margin-right: 10px;
+}
+
+.container h6 {
+  margin: 0;
+  font-weight: medium;
+  font-size: 18px;
+}
+
+.container svg {
+  padding: 20px 0;
+}
+
+.social a {
+  padding-right: 20px;
+}
+
+.page_list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.page_list li {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+@media(max-width: 768px){
+  .background_image div {
+    height: 200px;
+  }
+
+  .flex{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo{
+    width: auto;
+    padding-bottom: 24px;
+  }
+
+  .email{
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .email img{
+    margin-right: 0;
+  }
+
+  .grid{
+    width: auto;
+  }
+}
