@@ -1,4 +1,5 @@
 import Testimonials from "../app/components/Testimonials/Testimonials";
+import ProjectsSection from "../app/components/ProjectsSection/ProjectsSection";
 // import Contact from "../app/components/Contact/Contact";
 import HeroSection from "../app/components/HeroSection/HeroSection";
 
@@ -152,13 +153,9 @@ export default function Home() {
               acompañarte de principio a fin.
             </p>
             <div className="flex gap-3">
+              
               <a
-                href="#contacto"
-                className="inline-flex items-center justify-center rounded-full bg-[--cb-accent] px-5 py-2.5 text-sm font-medium text-slate-900 hover:bg-[--cb-accent-soft] transition-colors">
-                Quiero empezar un proyecto
-              </a>
-              <a
-                href="https://wa.me/5491112345678"
+                href="https://wa.me/5491158504632"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-[--cb-accent] px-5 py-2.5 text-sm font-medium text-slate-800 hover:bg-white transition-colors">
@@ -169,14 +166,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="proyectos"
-        className="section bg-cb-bg-soft border-y border-white/5">
-        <div className="container-cb">
-          <h2 className="h-title text-2xl md:text-3xl">Proyectos</h2>
-          {/* contenido a completar */}
-        </div>
-      </section>
+      <ProjectsSection />
 
       <Testimonials />
 

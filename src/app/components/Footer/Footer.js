@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-cb-bg-soft">
+    <footer className="border-t border-white/5 bg-[var(--cb-bg-soft)]">
       <div className="container-cb py-10 md:py-12 grid gap-8 md:grid-cols-4 text-sm">
         <div className="md:col-span-2 space-y-3">
           <div className="font-serif text-lg">Casa Botánica</div>
           <p className="text-slate-400 max-w-md">
             Estudio de diseño de jardines especializado en crear ambientes unicos. Paisajismo, palmeras, olivos, césped, riego,
-            iluminación y equipamiento exterior.
+            iluminación y deco.
           </p>
         </div>
 
