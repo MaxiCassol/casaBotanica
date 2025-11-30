@@ -1,64 +1,241 @@
-'use client'; 
 
-// import { useForm } from 'react-hook-form';
-import { sendEmail } from '../../utils/send-emails';
+// 'use client';
 
-export default function Contact() {
-  const { register, handleSubmit } = useForm();
+// import { useState } from 'react';
 
-  function onSubmit(data) {
-    sendEmail(data);
-  }
+// export default function Contact() {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     email: '',
+//     message: ''
+//   });
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [status, setStatus] = useState({ type: '', message: '' }); // 'success', 'error', ''
+//   const [errors, setErrors] = useState({});
 
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='mb-5'>
-        <label
-          htmlFor='name'
-          className='mb-3 block text-base font-medium text-black'
-        >
-          Full Name
-        </label>
-        <input
-          type='text'
-          placeholder='Full Name'
-          className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
-          {...register('name', { required: true })}
-        />
-      </div>
-      <div className='mb-5'>
-        <label
-          htmlFor='email'
-          className='mb-3 block text-base font-medium text-black'
-        >
-          Email Address
-        </label>
-        <input
-          type='email'
-          placeholder='example@domain.com'
-          className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
-          {...register('email', { required: true })}
-        />
-      </div>
-      <div className='mb-5'>
-        <label
-          htmlFor='message'
-          className='mb-3 block text-base font-medium text-black'
-        >
-          Message
-        </label>
-        <textarea
-          rows={4}
-          placeholder='Type your message'
-          className='w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
-          {...register('message', { required: true })}
-        ></textarea>
-      </div>
-      <div>
-        <button className='hover:shadow-form rounded-md bg-purple-500 py-3 px-8 text-base font-semibold text-white outline-none'>
-          Submit
-        </button>
-      </div>
-    </form>
-  );
-}
+//   // Validar email
+//   const validateEmail = (email) => {
+//     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     return regex.test(email);
+//   };
+
+//   // Validar formulario completo
+//   const validateForm = () => {
+//     const newErrors = {};
+
+//     if (!formData.name.trim()) {
+//       newErrors.name = 'El nombre es requerido';
+//     } else if (formData.name.trim().length < 2) {
+//       newErrors.name = 'El nombre debe tener al menos 2 caracteres';
+//     }
+
+//     if (!formData.email.trim()) {
+//       newErrors.email = 'El email es requerido';
+//     } else if (!validateEmail(formData.email)) {
+//       newErrors.email = 'Ingresá un email válido';
+//     }
+
+//     if (!formData.message.trim()) {
+//       newErrors.message = 'El mensaje es requerido';
+//     } else if (formData.message.trim().length < 10) {
+//       newErrors.message = 'El mensaje debe tener al menos 10 caracteres';
+//     }
+
+//     setErrors(newErrors);
+//     return Object.keys(newErrors).length === 0;
+//   };
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+    
+//     // Limpiar error del campo cuando el usuario escribe
+//     if (errors[name]) {
+//       setErrors(prev => ({
+//         ...prev,
+//         [name]: ''
+//       }));
+//     }
+    
+//     // Limpiar mensaje de estado
+//     if (status.message) {
+//       setStatus({ type: '', message: '' });
+//     }
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+    
+//     // Validar formulario
+//     if (!validateForm()) {
+//       setStatus({
+//         type: 'error',
+//         message: 'Por favor corregí los errores en el formulario'
+//       });
+//       return;
+//     }
+
+//     setIsSubmitting(true);
+//     setStatus({ type: '', message: '' });
+
+//     try {
+//       // Enviar por mailto
+//       const subject = `Mensaje de ${formData.name}`;
+//       const body = `
+// Nombre: ${formData.name}
+// Email: ${formData.email}
+
+// Mensaje:
+// ${formData.message}
+//       `.trim();
+
+//       const mailtoLink = `mailto:casabotanica1618@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+//       // Intentar abrir el cliente de email
+//       window.location.href = mailtoLink;
+
+//       // Limpiar formulario
+//       setFormData({ name: '', email: '', message: '' });
+//       setErrors({});
+      
+//       setStatus({
+//         type: 'success',
+//         message: 'Se abrió tu cliente de email. Si no se abrió, escribinos directamente por WhatsApp.'
+//       });
+
+//       // Ocultar mensaje después de 8 segundos
+//       setTimeout(() => {
+//         setStatus({ type: '', message: '' });
+//       }, 8000);
+
+//     } catch (error) {
+//       console.error('Error al enviar el formulario:', error);
+//       setStatus({
+//         type: 'error',
+//         message: 'Hubo un problema al abrir el cliente de email. Por favor intentá por WhatsApp.'
+//       });
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
+
+//   return (
+//     <section id="contacto" className="section bg-[--cb-bg-soft] border-t border-white/5">
+//       <div className="container-cb max-w-xl">
+//         <h2 className="h-title mb-6">Contacto</h2>
+//         <p className="text-slate-700 mb-8">
+//           Escribinos y coordinamos una visita. También podés hablar directo por WhatsApp.
+//         </p>
+
+//         <div className="space-y-5">
+//           {/* Campo Nombre */}
+//           <div>
+//             <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
+//               Nombre *
+//             </label>
+//             <input
+//               id="name"
+//               name="name"
+//               type="text"
+//               placeholder="Tu nombre"
+//               value={formData.name}
+//               onChange={handleChange}
+//               className={`w-full rounded-xl border ${
+//                 errors.name ? 'border-red-500' : 'border-slate-300'
+//               } px-4 py-2.5 text-sm focus:outline-none focus:ring-2 ${
+//                 errors.name ? 'focus:ring-red-500' : 'focus:ring-[--cb-accent]'
+//               } transition-colors`}
+//             />
+//             {errors.name && (
+//               <p className="mt-1 text-xs text-red-600">{errors.name}</p>
+//             )}
+//           </div>
+
+//           {/* Campo Email */}
+//           <div>
+//             <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+//               Email *
+//             </label>
+//             <input
+//               id="email"
+//               name="email"
+//               type="email"
+//               placeholder="tuemail@ejemplo.com"
+//               value={formData.email}
+//               onChange={handleChange}
+//               className={`w-full rounded-xl border ${
+//                 errors.email ? 'border-red-500' : 'border-slate-300'
+//               } px-4 py-2.5 text-sm focus:outline-none focus:ring-2 ${
+//                 errors.email ? 'focus:ring-red-500' : 'focus:ring-[--cb-accent]'
+//               } transition-colors`}
+//             />
+//             {errors.email && (
+//               <p className="mt-1 text-xs text-red-600">{errors.email}</p>
+//             )}
+//           </div>
+
+//           {/* Campo Mensaje */}
+//           <div>
+//             <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
+//               Mensaje *
+//             </label>
+//             <textarea
+//               id="message"
+//               name="message"
+//               rows={4}
+//               placeholder="Contanos sobre tu proyecto (mínimo 10 caracteres)"
+//               value={formData.message}
+//               onChange={handleChange}
+//               className={`w-full resize-none rounded-xl border ${
+//                 errors.message ? 'border-red-500' : 'border-slate-300'
+//               } px-4 py-2.5 text-sm focus:outline-none focus:ring-2 ${
+//                 errors.message ? 'focus:ring-red-500' : 'focus:ring-[--cb-accent]'
+//               } transition-colors`}
+//             />
+//             {errors.message && (
+//               <p className="mt-1 text-xs text-red-600">{errors.message}</p>
+//             )}
+//           </div>
+
+//           {/* Botón Submit */}
+//           <button
+//             onClick={handleSubmit}
+//             disabled={isSubmitting}
+//             className="w-full rounded-full bg-[--cb-accent] text-white py-3 text-sm font-medium hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+//           >
+//             {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+//           </button>
+
+//           {/* Mensajes de estado */}
+//           {status.message && (
+//             <div className={`p-4 rounded-xl border-2 ${
+//               status.type === 'success' 
+//                 ? 'bg-green-50 border-green-500 text-green-700' 
+//                 : 'bg-red-50 border-red-500 text-red-700'
+//             }`}>
+//               <p className="text-sm font-medium">{status.message}</p>
+//             </div>
+//           )}
+//         </div>
+
+//         {/* WhatsApp directo */}
+//         <div className="mt-10 text-center">
+//           <p className="text-xs text-slate-600 mb-3">
+//             ¿Preferís contactarnos directamente?
+//           </p>
+//           <a
+//             href="https://wa.me/5491158504632?text=Hola! Me gustaría consultar sobre diseño de jardines."
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             className="inline-block rounded-full border border-[--cb-accent] px-6 py-3 text-sm font-medium text-slate-800 hover:bg-white transition-colors"
+//           >
+//             📱 WhatsApp directo
+//           </a>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }

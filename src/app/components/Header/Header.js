@@ -67,7 +67,7 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="https://wa.me/5491158504632"
+            href="https://wa.me/541158504632"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-cb-accent px-4 py-2 text-xs font-medium text-slate-900 hover:bg-cb-accent-soft transition-colors"
