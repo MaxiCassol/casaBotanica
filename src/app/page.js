@@ -1,11 +1,13 @@
 import Testimonials from "../app/components/Testimonials/Testimonials";
 // import Contact from "../app/components/Contact/Contact";
+import HeroSection from "../app/components/HeroSection/HeroSection";
+
 
 export default function Home() {
   return (
     <div>
       {/* Hero lo armamos en el siguiente paso */}
-      <section className="section border-b border-white/5">
+      {/* <section className="section border-b border-white/5">
         <div className="container-cb">
           <p className="h-subtitle mb-4">Nordelta · Buenos Aires</p>
           <h1 className="h-title max-w-3xl">
@@ -13,11 +15,12 @@ export default function Home() {
           </h1>
           <p className="mt-4 max-w-xl text-slate-600 md:text-slate-400">
             En Casa Botánica diseñamos, construimos y equipamos jardines
-            modernos frente al agua: palmeras, olivos, césped, riego, luces y
+            con plantas tropicales, olivos, entre otras, tambien colocamos césped, riego, luces y
             deco exterior pensados a medida de cada casa.
           </p>
         </div>
-      </section>
+      </section> */}
+      <HeroSection />
 
       <section id="servicios" className="section bg-[--cb-bg-soft]">
         <div className="container-cb">
@@ -198,7 +201,7 @@ export default function Home() {
             {/* Columna izquierda: texto principal */}
             <div className="space-y-6 text-slate-700 leading-relaxed">
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
+                <h3 className=" h-subtitle text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
                   Lo que creemos
                 </h3>
                 <p>
@@ -234,7 +237,7 @@ export default function Home() {
             {/* Columna derecha: cómo trabajamos + cierre */}
             <div className="space-y-6 text-slate-700 leading-relaxed">
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
+                <h3 className="h-subtitle text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
                   Cómo trabajamos
                 </h3>
                 <p>
@@ -255,7 +258,7 @@ export default function Home() {
               </div>
 
             </div>
-            <div className="border-l-4 border-[--cb-accent] pl-4 py-2 bg-white/60 rounded-r-xl">
+            <div className="border-l-4 border-[#65a475ff] pl-4 py-2 bg-white/60 rounded-r-xl">
                 <p className="text-slate-800">
                   Casa Botánica nace de un deseo simple:{" "} <br/>
                   <strong>

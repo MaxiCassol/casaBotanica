@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from "next/image";
 
 const navLinks = [
   { href: '/', label: 'Inicio' },
@@ -31,7 +32,8 @@ export default function Header() {
       <div className="container-cb flex items-center justify-between py-4">
         {/* Logo / Marca */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-9 w-9 rounded-full bg-cb-accent/15 border border-cb-accent/40 flex items-center justify-center text-cb-accent">
+        {/* Logo / Marca */}
+          {/* <div className="h-9 w-9 rounded-full bg-cb-accent/15 border border-cb-accent/40 flex items-center justify-center text-cb-accent">
             <span className="text-lg font-serif">CB</span>
           </div>
           <div className="leading-tight">
@@ -40,7 +42,17 @@ export default function Header() {
             <div className="text-xs text-slate-400">
               Paisajismo · Boutique
             </div>
-          </div>
+          </div> */}
+          <div className="flex items-center gap-3">
+  <Image
+    src="/logo-casabotanica.png"
+    alt="Casa Botánica Logo"
+    width={160}
+    height={60}
+    className="h-auto w-[140px] md:w-40"
+    priority
+  />
+</div>
         </Link>
 
         {/* Navegación desktop */}
