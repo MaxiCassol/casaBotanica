@@ -1,10 +1,10 @@
-// 'use client'
+'use client'
 
 import Testimonials from "./components/Testimonials/Testimonials";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Nosotros from "./components/Nosotros/Nosotros";
-// import Contact from "./components/Contact/Contact";
+import Contacto from "./components/Contacto/Contacto";
 
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       </section> */}
       <HeroSection />
 
-      <section id="servicios" className="section bg-[--cb-bg-soft]">
+      <section id="servicios" className="section bg-[var(--cb-bg-soft)]">
         <div className="container-cb">
           <p className="h-subtitle mb-3 text-[--cb-accent]">Servicios</p>
           <h2 className="h-title mb-4">
@@ -175,7 +175,7 @@ export default function Home() {
 
       <Nosotros />
 
-      {/* <Contact /> */}
+      <Contacto />
     </div>
   );
 }
