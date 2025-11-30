@@ -5,8 +5,7 @@ export default function Footer() {
         <div className="md:col-span-2 space-y-3">
           <div className="font-serif text-lg">Casa Botánica</div>
           <p className="text-slate-400 max-w-md">
-            Estudio de diseño de jardines especializado en casas con lago en
-            Nordelta y alrededores. Paisajismo, palmeras, olivos, césped, riego,
+            Estudio de diseño de jardines especializado en crear ambientes unicos. Paisajismo, palmeras, olivos, césped, riego,
             iluminación y equipamiento exterior.
           </p>
         </div>
