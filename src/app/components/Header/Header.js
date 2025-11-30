@@ -36,6 +36,7 @@ export default function Header() {
           </div>
           <div className="leading-tight">
             <div className="font-serif text-lg">Casa Botánica</div>
+            <image src="../../../../public/Logo Casa Botanica.png" alt="logo" className="h-12" />
             <div className="text-xs text-slate-400">
               Paisajismo · Boutique
             </div>

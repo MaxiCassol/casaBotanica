@@ -1,4 +1,5 @@
-import Testimonials from "@/app/components/Testimonials/Testimonials";
+import Testimonials from "../app/components/Testimonials/Testimonials";
+// import Contact from "../app/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
         <div className="container-cb">
           <p className="h-subtitle mb-4">Nordelta · Buenos Aires</p>
           <h1 className="h-title max-w-3xl">
-            Jardines diseñados para convivir con el lago.
+            Jardines diseñados para convivir con la naturaleza.
           </h1>
           <p className="mt-4 max-w-xl text-slate-600 md:text-slate-400">
             En Casa Botánica diseñamos, construimos y equipamos jardines
@@ -18,15 +19,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="servicios" className="section bg-[var(--cb-bg-soft)]">
+      <section id="servicios" className="section bg-[--cb-bg-soft]">
         <div className="container-cb">
-          <p className="h-subtitle mb-3 text-[var(--cb-accent)]">Servicios</p>
+          <p className="h-subtitle mb-3 text-[--cb-accent]">Servicios</p>
           <h2 className="h-title mb-4">
-            Diseñamos jardines completos, frente al lago.
+            Diseñamos jardines completos, maceteros ornamentales, balcones, terrazas y espacios exteriores.
           </h2>
           <p className="max-w-2xl text-slate-700 mb-10">
             Acompañamos todo el proceso: desde el primer boceto hasta la última
-            luz. Cada jardín está pensado para el estilo de vida de Nordelta.
+            luz. Cada jardín está pensado para tu estilo de vida.
           </p>
 
           <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -47,7 +48,7 @@ export default function Home() {
                   Diseño integral de jardines
                 </h3>
                 <p className="text-sm opacity-90">
-                  Proyecto completo de paisajismo para casas frente al lago.
+                  Proyecto completo de paisajismo y decoración exterior e interior.
                 </p>
               </div>
             </div>
@@ -131,7 +132,7 @@ export default function Home() {
                 backgroundPosition: "center",
               }}>
               <div className="absolute inset-0 bg-black/20"></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-5 text-white">
+              <div className="absolute  inset-0 flex flex-col justify-end p-5 text-white">
                 <h3 className="font-semibold text-lg">Equipamiento & deco</h3>
                 <p className="text-sm opacity-90">
                   Fuentes, budas, camastros, Bali deco y piezas que completan la
@@ -150,14 +151,14 @@ export default function Home() {
             <div className="flex gap-3">
               <a
                 href="#contacto"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--cb-accent)] px-5 py-2.5 text-sm font-medium text-slate-900 hover:bg-[var(--cb-accent-soft)] transition-colors">
+                className="inline-flex items-center justify-center rounded-full bg-[--cb-accent] px-5 py-2.5 text-sm font-medium text-slate-900 hover:bg-[--cb-accent-soft] transition-colors">
                 Quiero empezar un proyecto
               </a>
               <a
                 href="https://wa.me/5491112345678"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--cb-accent)] px-5 py-2.5 text-sm font-medium text-slate-800 hover:bg-white transition-colors">
+                className="inline-flex items-center justify-center rounded-full border border-[--cb-accent] px-5 py-2.5 text-sm font-medium text-slate-800 hover:bg-white transition-colors">
                 Consultar por WhatsApp
               </a>
             </div>
@@ -197,7 +198,7 @@ export default function Home() {
             {/* Columna izquierda: texto principal */}
             <div className="space-y-6 text-slate-700 leading-relaxed">
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[var(--cb-accent)] mb-2">
+                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
                   Lo que creemos
                 </h3>
                 <p>
@@ -233,7 +234,7 @@ export default function Home() {
             {/* Columna derecha: cómo trabajamos + cierre */}
             <div className="space-y-6 text-slate-700 leading-relaxed">
               <div>
-                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[var(--cb-accent)] mb-2">
+                <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-[--cb-accent] mb-2">
                   Cómo trabajamos
                 </h3>
                 <p>
@@ -254,7 +255,7 @@ export default function Home() {
               </div>
 
             </div>
-            <div className="border-l-4 border-[var(--cb-accent)] pl-4 py-2 bg-white/60 rounded-r-xl">
+            <div className="border-l-4 border-[--cb-accent] pl-4 py-2 bg-white/60 rounded-r-xl">
                 <p className="text-slate-800">
                   Casa Botánica nace de un deseo simple:{" "} <br/>
                   <strong>
@@ -267,14 +268,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="contacto"
-        className="section bg-cb-bg-soft border-t border-white/5">
-        <div className="container-cb">
-          <h2 className="h-title text-2xl md:text-3xl">Contacto</h2>
-          {/* contenido a completar */}
-        </div>
-      </section>
+      {/* <Contact /> */}
     </div>
   );
 }
