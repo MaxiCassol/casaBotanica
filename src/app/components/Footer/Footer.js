@@ -29,18 +29,18 @@ export default function Footer() {
           <ul className="space-y-1 text-slate-400">
             <li>
               <a
-                href="#"
+                href="https://www.instagram.com/casabotanica_ar/"
                 className="hover:text-white transition-colors">
                 Instagram
               </a>
             </li>
             <li>              
-              <a href="https://https://ar.pinterest.com/casabotanica1618/" className="hover:text-white transition-colors">                
+              <a href="https://https://ar.pinterest.com/casabotanica_ar/" className="hover:text-white transition-colors">                
                   Pinterest
               </a>
             </li>
             <li>              
-              <a href="https://www.linkedin.com/in/maximilianocassol/?locale=en_US" className="hover:text-white transition-colors">
+              <a href="https://www.facebook.com/casabotanica.ar" className="hover:text-white transition-colors">
                   Facebook
               </a>
             </li>

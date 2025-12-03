@@ -44,7 +44,7 @@ export default function HeroSection() {
 
         <p className="max-w-xl text-slate-700 text-base md:text-lg mb-8">
           Construimos refugios naturales en Jardines, terrazas, balcones u oficinas,
-con plantas tropicales, olivos y una selección botánica curada,
+con una selección botánica curada,
 además de césped, riego, iluminación y deco pensados para realzar cada espacio.
         </p>
 
