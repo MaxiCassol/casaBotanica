@@ -29,7 +29,7 @@ export default function ServiciosSection() {
             imagenes={[
               "/servicios/parquizacion/1.jpg",
               "/servicios/parquizacion/2.jpg",
-              // "/servicios/parquizacion/3.jpg",
+              "/servicios/parquizacion/3.jpg",
             ]}
           />
 

@@ -17,7 +17,7 @@ export default function Footer() {
           <ul className="space-y-1 text-slate-400">
             <li>Pje del ciudadano 45, depto 316</li>
             <li>Nordelta · Buenos Aires · Argentina</li>
-            <li>Tel / WhatsApp: +54 9 11 XXXXXXXX</li>
+            <li>Tel / WhatsApp: +54 9 11 5850-4632</li>
             <li>Email: casabotanica1618@gmail.com</li>
           </ul>
         </div>
