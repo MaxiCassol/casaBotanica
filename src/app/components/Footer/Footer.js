@@ -35,7 +35,7 @@ export default function Footer() {
               </a>
             </li>
             <li>              
-              <a href="https://https://ar.pinterest.com/casabotanica_ar/" className="hover:text-white transition-colors">                
+              <a href="https://ar.pinterest.com/casabotanica_ar/" className="hover:text-white transition-colors"> 
                   Pinterest
               </a>
             </li>
